@@ -2,7 +2,7 @@
 
 抖音无水印视频下载器 — AI Agent 技能包
 
-零浏览器依赖，纯 Python + requests，适配 Hermes / Claude Code / DeepSeek CLI 等 AI Agent。
+零浏览器依赖，纯 Python + requests，适配 Hermes / Claude Code / OpenClaw 等 AI Agent。
 
 ## ✨ 特点
 
@@ -15,7 +15,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/xinyi-it/douyin-downloader.git
+git clone https://github.com/xinyi-it/douyin-downloader-skill.git
 cd douyin-downloader
 pip install -r requirements.txt
 ```
@@ -59,14 +59,7 @@ hermes skill install https://github.com/xinyi-it/douyin-downloader
 把仓库克隆到技能目录：
 
 ```bash
-git clone https://github.com/xinyi-it/douyin-downloader.git ~/.claude/skills/douyin-downloader
-```
-
-### DeepSeek CLI
-
-```bash
-git clone https://github.com/xinyi-it/douyin-downloader-skill.git ~/skills/douyin-downloader
-# 在 deepseek 配置中添加技能路径
+git clone https://github.com/xinyi-it/douyin-downloader-skill.git ~/.claude/skills/douyin-downloader
 ```
 
 ### OpenClaw
@@ -111,6 +104,16 @@ OpenClaw 会自动加载 `SKILL.md`，用户发抖音链接时机器人会调用
 ## 致谢
 
 灵感来自 [xiaoyiv/douyin-skill](https://github.com/xiaoyiv/douyin-skill)，原版用 CDP 浏览器自动化，本版改为纯 HTTP 方案，更轻量更通用。
+
+## 更新日志
+
+### v1.0.0 (2026-06-24)
+
+- 首个公开版本
+- 纯 Python + requests，零浏览器依赖
+- 支持短链接、完整URL、分享文本
+- 无水印下载（/playwm/ → /play/）
+- 适配 Hermes / Claude Code / OpenClaw
 
 ## License
 
