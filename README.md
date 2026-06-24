@@ -65,9 +65,23 @@ git clone https://github.com/xinyi-it/douyin-downloader.git ~/.claude/skills/dou
 ### DeepSeek CLI
 
 ```bash
-git clone https://github.com/xinyi-it/douyin-downloader.git ~/skills/douyin-downloader
+git clone https://github.com/xinyi-it/douyin-downloader-skill.git ~/skills/douyin-downloader
 # 在 deepseek 配置中添加技能路径
 ```
+
+### OpenClaw
+
+```bash
+# 1. 克隆到 OpenClaw skills 目录
+git clone https://github.com/xinyi-it/douyin-downloader-skill.git ~/.openclaw/skills/douyin-downloader
+
+# 2. 重启 gateway 生效
+systemctl --user restart openclaw-gateway.service
+```
+
+OpenClaw 会自动加载 `SKILL.md`，用户发抖音链接时机器人会调用 `python douyin.py` 下载。
+
+> ⚠️ 确保 OpenClaw 运行环境已安装 `requests`（`pip install requests`），且 `python3` 可用。
 
 ## 输出
 
